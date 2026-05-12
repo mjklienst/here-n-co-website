@@ -310,6 +310,11 @@ h3 {
   top: 112px;
 }
 
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
 .menu-board {
   padding: clamp(1.25rem, 4vw, 3rem);
 }
@@ -404,8 +409,42 @@ h3 {
   padding-top: 1rem;
 }
 
+.map-section,
+.social-section,
 .contact-section {
   padding-top: 0;
+}
+
+.embed-card {
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.embed-card iframe,
+.map-card iframe {
+  display: block;
+  width: 100%;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.instagram-card {
+  padding: 1rem;
+}
+
+.instagram-card blockquote,
+.instagram-card iframe {
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
 }
 
 .contact-grid {
@@ -523,7 +562,8 @@ h3 {
   .hero-grid,
   .split,
   .visit-card,
-  .contact-grid {
+  .contact-grid,
+  .social-grid {
     grid-template-columns: 1fr;
   }
 
