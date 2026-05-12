@@ -1,9 +1,146 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="visit here, & co. at 150 s maple st in yamhill, oregon." /><title>here, & co. | visit</title><link rel="stylesheet" href="css/styles.css" /><script src="js/main.js" defer></script></head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="visit or contact here, & co. at 150 s maple st in yamhill, oregon." />
+  <title>here, & co. | visit</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/main.js" defer></script>
+</head>
+
 <body>
   <a class="skip-link" href="#main">skip to content</a>
-  <header class="site-header"><nav class="nav" aria-label="main navigation"><a class="brand logo-text" href="index.html" aria-label="here, and co. home"><span>here,</span><span>&amp; co.</span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">menu</button><div class="nav-links" id="nav-links"><a href="about.html">about</a><a href="menu.html">menu</a><a href="gather.html">gather</a><a href="visit.html" aria-current="page">visit</a></div></nav></header>
-  <main id="main"><section><div class="container visit-card"><div><p class="eyebrow">visit us</p><h1>we're glad you're here.</h1><address>150 s maple st<br />yamhill, or 97148</address><div class="hero-actions"><a class="button primary" href="https://www.google.com/maps/search/?api=1&query=150%20S%20Maple%20St%2C%20Yamhill%2C%20OR%2097148" target="_blank" rel="noreferrer">directions</a><a class="button secondary" href="https://www.instagram.com/here.yamhill/" target="_blank" rel="noreferrer">instagram</a></div></div><div class="visit-list" aria-label="contact details"><div><h3>hours</h3><p>add current hours here.</p></div><div><h3>contact</h3><p>add phone or email here.</p></div><div><h3>note</h3><p>small town. good company. come sip with us.</p></div></div></div></section></main>
-  <footer class="footer"><div class="container"><span>© <span id="year"></span> here, & co.</span><span>150 s maple st, yamhill, or</span></div></footer>
-</body></html>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="main navigation">
+      <a class="brand logo-text" href="index.html" aria-label="here, and co. home">
+        <span>here,</span>
+        <span>&amp; co.</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">
+        menu
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="about.html">about</a>
+        <a href="menu.html">menu</a>
+        <a href="gather.html">gather</a>
+        <a href="visit.html" aria-current="page">visit</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="container visit-card">
+        <div>
+          <p class="eyebrow">visit us</p>
+          <h1>we're glad you're here.</h1>
+
+          <address>
+            150 s maple st<br />
+            yamhill, or 97148
+          </address>
+
+          <div class="hero-actions">
+            <a
+              class="button primary"
+              href="https://www.google.com/maps/search/?api=1&query=150%20S%20Maple%20St%2C%20Yamhill%2C%20OR%2097148"
+              target="_blank"
+              rel="noreferrer"
+            >
+              directions
+            </a>
+
+            <a
+              class="button secondary"
+              href="https://www.instagram.com/here.yamhill/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="visit-list" aria-label="contact details">
+          <div>
+            <h3>hours</h3>
+            <p>add current hours here.</p>
+          </div>
+
+          <div>
+            <h3>contact</h3>
+            <p>send us a note below.</p>
+          </div>
+
+          <div>
+            <h3>note</h3>
+            <p>small town. good company. come sip with us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">say hi</p>
+          <h2 id="contact-title">contact us</h2>
+          <p class="lead">
+            questions about hours, gatherings, boards, or what’s pouring?
+            send a little note and we’ll get back to you.
+          </p>
+        </div>
+
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
+          <p class="hidden">
+            <label>
+              don’t fill this out if you’re human:
+              <input name="bot-field" />
+            </label>
+          </p>
+
+          <div class="form-row">
+            <label for="name">name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="message">message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button class="button primary" type="submit">send message</button>
+
+          <p class="form-note">
+            this form is ready for netlify forms. after deploying, add an email notification in netlify to send submissions to test@test.com.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span id="year"></span> here, & co.</span>
+      <span>150 s maple st, yamhill, or</span>
+    </div>
+  </footer>
+</body>
+</html>
